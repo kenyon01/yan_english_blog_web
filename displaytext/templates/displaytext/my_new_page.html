@@ -1,0 +1,15 @@
+<!-- displaytext/templates/displaytext/my_new_page.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question and Answer</title>
+</head>
+<body>
+    <h1>{{ question.text }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
